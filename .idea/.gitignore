@@ -1,3 +1,17 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+*.iml
+.gradle
+/local.properties
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+/.idea
+gradlew
+gradlew.bat
+/gradle
+app/google-services.json
