@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ComprasNet</string>
+
+    /** barra de navegação **/
+    <string name="home_button">ComprasNet</string>
+    <string name="graphs_button">ComprasNet</string>
+    <string name="map_button">ComprasNet</string>
+    <string name="more_button">ComprasNet</string>
+    <string name="account_button">ComprasNet</string>
+
 </resources>
