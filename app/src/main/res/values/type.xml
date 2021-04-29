@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        O arquivo type.xml armazena as informações de APARÊNCIA DE TEXTO (font, estilo),
+        tamanho de texto, dimensões, espaçamento de letras, etc.
+        Esse arquivo não deve conter informações de componentes (widgets).
+
+        Todas as definições desse arquivo não devem ser acessadas diretamente.
+        Deve-se configurar o tema para usar essas definições ou atribuir a
+        configurações de widgets no arquivo styles.xml.
+
+        NOME DO STYLE TEM QUE SER CAMEL NomeExemplo
+    -->
+
+    <style name="TituloHome">
+        <item name="android:textStyle">normal</item>
+        <item name="fontFamily">@font/ubuntu-M</item>
+        <item name="android:fontFamily">@font/ubuntu-M</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+</resources>
