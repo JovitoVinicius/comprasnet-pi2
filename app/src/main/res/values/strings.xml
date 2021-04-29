@@ -8,6 +8,16 @@
     <string name="button_more">Mais</string>
     <string name="button_account">Minha Conta</string>
 
+    /** Tela Home **/
+    <string name="Home">Transparência</string>
+    <string name="field_pesquisar">Pesquisar</string>
+    <string name="button_total_contratos">Total Contratos</string>
+    <string name="button_vencem_menos30">Vencem (- 30 dias)</string>
+    <string name="button_vencem_30a60">Vencem (30 a 60 dias)</string>
+    <string name="button_vencem_60a90">Vencem (60 a 90 dias)</string>
+    <string name="button_vencem_90a180">Vencem (90 a 180 dias)</string>
+    <string name="button_vencem_mais180">Vencem (+ 180 dias)</string>
+
     /** Tela Minha Conta - Login **/
     <string name="field_email">Email</string>
     <string name="field_user">Usuário</string>
