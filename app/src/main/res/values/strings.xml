@@ -49,6 +49,12 @@
     <string name="link_vistos">Vistos</string>
     <string name="link_ajuda">Ajuda</string>
 
+    /** Tela filtros **/
+    <string name="field_orgao">Orgão</string>
+    <string name="field_unidade_gestora">Unidade Gestora</string>
+    <string name="field_fornecedor">Fornecedor</string>
+    <string name="field_contrato">Contrato</string>
+    <string name="button_filtrar">Filtrar</string>
 
 
 </resources>
