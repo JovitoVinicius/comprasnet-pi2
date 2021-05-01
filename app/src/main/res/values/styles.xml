@@ -24,4 +24,19 @@
         <item name="dotsSpacing">4dp</item>
     </style>
 
+    <style name="Widget.Title" parent="android:Widget">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadline1</item>
+    </style>
+
+    <style name="Widget.Body1" parent="android:Widget">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textAppearance">?attr/textAppearanceBody1</item>
+    </style>
+
+    <style name="Widget.SubTitle1" parent="android:Widget">
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+        <item name="android:textAppearance">?attr/textAppearanceSubtitle1</item>
+    </style>
+
 </resources>
