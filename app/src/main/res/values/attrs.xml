@@ -6,5 +6,4 @@
     <attr format="reference"    name="titleStyle"/>
     <attr format="reference"    name="body1Style"/>
     <attr format="reference"    name="gradientBackground"/>
-    <attr format="reference"    name="backgroundColor"/>
 </resources>
