@@ -81,7 +81,8 @@
         <item name="primaryButtonStyle">@style/Widget.MaterialComponents.Button.OutlinedButton.PrimaryButton</item>
         <item name="textAppearanceButton">@style/TextAppearance.MaterialComponents.Button.BaseButton</item>
         <item name="viewPagerDotsStyle">@style/Widget.ViewPageIndicator</item>
-        <item name="gradientBackground">@drawable/gradient_blue_90</item>
+        <item name="gradientBackground">@drawable/gradient_blue</item>
+        <item name="gradientBackground90">@drawable/gradient_blue_90</item>
         <item name="subtitleStyle">@style/Widget.SubTitle1</item>
         <item name="titleStyle">@style/Widget.Title</item>
         <item name="body1Style">@style/Widget.Body1</item>
