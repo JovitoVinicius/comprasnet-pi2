@@ -48,8 +48,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/viewLogin"
-        app:srcCompat="@drawable/ic_outline_account_circle_24"
-        app:tint="?colorOnPrimary" />
+        android:src="@drawable/icon_user"
+        />
 
     <!-- AQUI -->
 
