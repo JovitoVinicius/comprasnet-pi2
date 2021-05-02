@@ -18,7 +18,7 @@
     <ImageView
         android:id="@+id/ivOnboarding2"
         android:layout_width="0dp"
-        android:layout_height="617dp"
+        android:layout_height="0dp"
         android:src="@drawable/onboarding_2"
         app:layout_constraintBottom_toTopOf="@+id/viewOnboard2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,7 +30,7 @@
         style="?titleStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="40dp"
         android:text="@string/text_onboarding2"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/viewOnboard2"
