@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">ComprasNet</string>
 
+    /** OnBoarding **/
+    <string name="button_start">VAMOS LÁ</string>
+    <string name="text_onboarding1">Navegue pelos contratos</string>
+    <string name="text_onboarding2">Filtre os contratos desejados</string>
+    <string name="text_onboarding3">Favorite para ver depois</string>
+
     /** Barra de Navegação **/
     <string name="button_home">Home</string>
     <string name="button_graphs">Gráficos</string>
@@ -19,6 +25,7 @@
     <string name="button_vencem_mais180">Vencem (+ 180 dias)</string>
 
     /** Tela Minha Conta - Login **/
+    <string name="title_minha_conta">Minha Conta</string>
     <string name="field_email">Email</string>
     <string name="field_user">Usuário</string>
     <string name="field_password">Senha</string>
