@@ -4,13 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragment.onboarding.screen.OnboardingSecondFragment" >
+    tools:context=".ui.fragment.onboarding.screen.OnboardingFirstFragment" >
+
+    <View
+        android:id="@+id/viewOnboard2"
+        android:layout_width="397dp"
+        android:layout_height="203dp"
+        android:background="?gradientBackground90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/ivOnboarding2"
         android:layout_width="0dp"
         android:layout_height="617dp"
         android:src="@drawable/onboarding_2"
+        app:layout_constraintBottom_toTopOf="@+id/viewOnboard2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -18,11 +28,14 @@
     <TextView
         android:id="@+id/tvOnboarding2"
         style="?titleStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="60dp"
         android:text="@string/text_onboarding2"
-        app:layout_constraintBottom_toBottomOf="@+id/ivOnboarding2"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/viewOnboard2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
