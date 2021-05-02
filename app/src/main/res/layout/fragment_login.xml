@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivComprasNetLogin"
         android:layout_width="368dp"
         android:layout_height="70dp"
         android:layout_marginStart="22dp"
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toTopOf="@+id/viewLogin" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/ivUserIconLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="178dp"
