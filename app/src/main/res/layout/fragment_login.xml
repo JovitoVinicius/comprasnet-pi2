@@ -31,6 +31,7 @@
 
     <TextView
         android:id="@+id/tvMinhaConta"
+        android:style="?titleStyle2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="87dp"
@@ -38,6 +39,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/viewLogin" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="178dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewLogin"
+        app:srcCompat="@drawable/ic_outline_account_circle_24"
+        app:tint="?colorOnPrimary" />
 
     <!-- AQUI -->
 
