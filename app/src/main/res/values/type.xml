@@ -11,7 +11,6 @@
 
         NOME DO STYLE TEM QUE SER CAMEL NomeExemplo
     -->
-
     <style name="TextAppearance.App.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
         <item name="android:textStyle">normal</item>
         <item name="fontFamily">@font/ubuntu_m</item>
