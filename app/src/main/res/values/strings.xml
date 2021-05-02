@@ -7,7 +7,6 @@
     <string name="text_onboarding2">Filtre os contratos desejados</string>
     <string name="text_onboarding3">Favorite para ver depois</string>
 
-
     /** Barra de Navegação **/
     <string name="button_home">Home</string>
     <string name="button_graphs">Gráficos</string>
@@ -73,7 +72,5 @@
     <string name="field_fornecedor">Fornecedor</string>
     <string name="field_contrato">Contrato</string>
     <string name="button_filtrar">Filtrar</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

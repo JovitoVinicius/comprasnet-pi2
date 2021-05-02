@@ -4,6 +4,7 @@
     <attr format="reference"    name="viewPagerDotsStyle"/>
     <attr format="reference"    name="subtitleStyle"/>
     <attr format="reference"    name="titleStyle"/>
+    <attr format="reference"    name="titleStyle2"/>
     <attr format="reference"    name="body1Style"/>
     <attr format="reference"    name="gradientBackground"/>
     <attr format="reference"    name="gradientBackground90"/>

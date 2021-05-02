@@ -74,6 +74,7 @@
 
         <!-- Text Appearance -->
         <item name="textAppearanceHeadline1">@style/TextAppearance.App.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.App.Headline2</item>
         <item name="textAppearanceBody1">@style/TextAppearance.App.Body1</item>
         <item name="textAppearanceSubtitle1">@style/TextAppearance.App.Subtitle1</item>
 
@@ -85,6 +86,7 @@
         <item name="gradientBackground90">@drawable/gradient_blue_90</item>
         <item name="subtitleStyle">@style/Widget.SubTitle1</item>
         <item name="titleStyle">@style/Widget.Title</item>
+        <item name="titleStyle2">@style/Widget.Title2</item>
         <item name="body1Style">@style/Widget.Body1</item>
 
     </style>
