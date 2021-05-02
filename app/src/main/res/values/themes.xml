@@ -88,6 +88,8 @@
         <item name="titleStyle">@style/Widget.Title</item>
         <item name="titleStyle2">@style/Widget.Title2</item>
         <item name="body1Style">@style/Widget.Body1</item>
+        <item name="editTextLayoutStyle">@style/Widget.EditTextLayout</item>
+        <item name="layoutEditTextStyle">@style/Widget.EditText</item>
 
     </style>
 </resources>

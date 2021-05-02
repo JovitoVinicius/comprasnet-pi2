@@ -8,4 +8,6 @@
     <attr format="reference"    name="body1Style"/>
     <attr format="reference"    name="gradientBackground"/>
     <attr format="reference"    name="gradientBackground90"/>
+    <attr format="reference"    name="editTextLayoutStyle"/>
+    <attr format="reference"    name="layoutEditTextStyle"/>
 </resources>
