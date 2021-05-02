@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.login.LoginFragment" >
 
+    <!-- Design Padrão das telas daqui até...-->
+
     <View
         android:id="@+id/viewLogin"
         android:layout_width="0dp"
@@ -36,5 +38,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/viewLogin" />
+
+    <!-- AQUI -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
