@@ -31,7 +31,7 @@
 
     <TextView
         android:id="@+id/tvMinhaConta"
-        android:style="?titleStyle2"
+        style="?titleStyle2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="87dp"
