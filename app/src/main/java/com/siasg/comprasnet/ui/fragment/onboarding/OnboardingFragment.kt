@@ -6,11 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.ListFragment
 import androidx.lifecycle.Lifecycle
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.siasg.comprasnet.databinding.FragmentOnboardingBinding
-import com.siasg.comprasnet.ui.adapter.OnboardingAdapter
 import com.siasg.comprasnet.ui.fragment.onboarding.screen.OnboardingFirstFragment
 import com.siasg.comprasnet.ui.fragment.onboarding.screen.OnboardingSecondFragment
 import com.siasg.comprasnet.ui.fragment.onboarding.screen.OnboardingThirdFragment
