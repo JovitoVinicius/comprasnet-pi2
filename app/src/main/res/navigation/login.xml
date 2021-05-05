@@ -6,5 +6,20 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.siasg.comprasnet.ui.fragment.login.LoginFragment"
-        android:label="LoginFragment" />
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_forgotPasswordFragment"
+            app:destination="@id/forgotPasswordFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.siasg.comprasnet.ui.fragment.login.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.siasg.comprasnet.ui.fragment.login.SignUpFragment"
+        android:label="SignUpFragment" />
 </navigation>
