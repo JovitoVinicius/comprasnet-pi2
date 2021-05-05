@@ -4,15 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     app:startDestination="@id/homeFragment">
-
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.siasg.comprasnet.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
-    <fragment
-        android:id="@+id/resultFragment"
-        android:name="com.siasg.comprasnet.ResultFragment"
-        android:label="fragment_result"
-        tools:layout="@layout/fragment_result" />
+        android:name="com.siasg.comprasnet.ui.fragment.main.HomeFragment"
+        android:label="HomeFragment" />
 </navigation>
