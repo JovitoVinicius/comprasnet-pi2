@@ -24,8 +24,17 @@
     <string name="button_vencem_90a180">Vencem (90 a 180 dias)</string>
     <string name="button_vencem_mais180">Vencem (+ 180 dias)</string>
 
+    /** Tela Filtros **/
+    <string name="title_filtro_de_pesquisa">Filtro de Pesquisa</string>
+    <string name="field_orgao">Orgão</string>
+    <string name="field_unidade_gestora">Unidade Gestora</string>
+    <string name="field_fornecedor">Fornecedor</string>
+    <string name="field_contrato">Contrato</string>
+    <string name="button_filtrar">Filtrar</string>
+    <string name="button_cancelar">Cancelar</string>
+
     /** Tela Minha Conta - Login **/
-    <string name="title_minha_conta">Minha Conta</string>
+    <string name="title_minha_conta">Minha conta</string>
     <string name="field_email">Email</string>
     <string name="field_user">Usuário</string>
     <string name="field_password">Senha</string>
@@ -48,13 +57,14 @@
     <string name="field_change_failure">Houve um erro, sua senha não foi alterada.</string>
 
     /** Tela Minha Conta - Esqueci a senha **/
+    <string name="title_esqueci_senha">Recuperar Senha</string>
     <string name="field_type_email">Digite seu email</string>
     <string name="button_send_email">Enviar email</string>
     <string name="field_forgot_success">Um email de recuperação foi enviado a sua caixa de entrada</string>
     <string name="field_forgot_failure">Houve um erro, não foi possível enviar email de recuperação de senha</string>
 
     /** Tela Minha Conta - Cadastro **/
-    <string name="field_cadastro">Cadastro</string>
+    <string name="title_signup">Cadastro</string>
     <string name="field_type_password">Digite a senha</string>
     <string name="field_type_password_repeat">Confirme a senha</string>
     <string name="button_signup">Cadastrar</string>
@@ -66,11 +76,7 @@
     <string name="link_vistos">Vistos</string>
     <string name="link_ajuda">Ajuda</string>
 
-    /** Tela filtros **/
-    <string name="field_orgao">Orgão</string>
-    <string name="field_unidade_gestora">Unidade Gestora</string>
-    <string name="field_fornecedor">Fornecedor</string>
-    <string name="field_contrato">Contrato</string>
-    <string name="button_filtrar">Filtrar</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

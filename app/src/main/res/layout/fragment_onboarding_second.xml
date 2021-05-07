@@ -8,7 +8,7 @@
 
     <View
         android:id="@+id/viewOnboard2"
-        android:layout_width="397dp"
+        android:layout_width="0dp"
         android:layout_height="203dp"
         android:background="?gradientBackground90"
         app:layout_constraintBottom_toBottomOf="parent"
