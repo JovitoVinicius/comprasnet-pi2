@@ -54,8 +54,8 @@
         <!--
             Surface color são cores usadas em componentes como cards, menus e grades.
         -->
-        <item name="colorSurface">@color/blue_comprasnet</item>
-        <item name="colorOnSurface">@color/blue_comprasnet</item>
+        <item name="colorSurface">@color/white</item>
+        <item name="colorOnSurface">@color/black</item>
 
         <!--
             Error color indica erro nos componentes como texto inválido em um campo de texto.

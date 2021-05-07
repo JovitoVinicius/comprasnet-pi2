@@ -99,7 +99,6 @@
             app:layout_constraintGuide_percent="0.5" />
 
         <com.google.android.material.textfield.TextInputLayout
-            style="?editTextLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -110,7 +109,6 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                style="?layoutEditTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="30"
@@ -131,7 +129,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="hint" />
+                android:hint="hint"
+                android:inputType="textPassword"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- AQUI -->
