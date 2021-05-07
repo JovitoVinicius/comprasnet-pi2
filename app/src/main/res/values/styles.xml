@@ -46,7 +46,7 @@
 
     <style name="Widget.EditTextLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="passwordToggleTint">?attr/colorOnPrimary</item>
-        <item name="errorTextColor">?attr/colorSecondary</item>
+        <item name="errorTextColor">?attr/colorError</item>
         <item name="boxStrokeColor">?attr/colorOnPrimary</item>
         <item name="hintTextColor">?attr/colorOnPrimary</item>
         <item name="boxBackgroundColor">?attr/colorOnPrimary</item>
