@@ -39,7 +39,7 @@
         -->
         <item name="colorPrimary">@color/blue_comprasnet</item>
         <item name="colorPrimaryVariant">@color/blue_comprasnet</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
 
         <!--
             Secondary brand color.
