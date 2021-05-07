@@ -57,7 +57,7 @@
     <string name="field_change_failure">Houve um erro, sua senha não foi alterada.</string>
 
     /** Tela Minha Conta - Esqueci a senha **/
-    <string name="title_esqueci_senha">Recuperar Senha</string>
+    <string name="title_esqueci_senha">Esqueci a Senha</string>
     <string name="field_type_email">Digite seu email</string>
     <string name="button_send_email">Enviar email</string>
     <string name="field_forgot_success">Um email de recuperação foi enviado a sua caixa de entrada</string>
