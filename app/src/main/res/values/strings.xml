@@ -31,7 +31,7 @@
     <string name="field_fornecedor">Fornecedor</string>
     <string name="field_contrato">Contrato</string>
     <string name="button_filtrar">Filtrar</string>
-    <string name="button_cancelar">Cancelar</string>
+    <string name="button_back">Voltar</string>
 
     /** Tela Minha Conta - Login **/
     <string name="title_minha_conta">Minha conta</string>
