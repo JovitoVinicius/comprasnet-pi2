@@ -76,6 +76,7 @@
         <item name="textAppearanceHeadline1">@style/TextAppearance.App.Headline1</item>
         <item name="textAppearanceHeadline2">@style/TextAppearance.App.Headline2</item>
         <item name="textAppearanceBody1">@style/TextAppearance.App.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.App.Body2</item>
         <item name="textAppearanceSubtitle1">@style/TextAppearance.App.Subtitle1</item>
 
         <!-- Customize your theme here. -->
@@ -88,6 +89,7 @@
         <item name="titleStyle">@style/Widget.Title</item>
         <item name="titleStyle2">@style/Widget.Title2</item>
         <item name="body1Style">@style/Widget.Body1</item>
+        <item name="body2Style">@style/Widget.Body2</item>
         <item name="editTextLayoutStyle">@style/Widget.EditTextLayout</item>
         <item name="layoutEditTextStyle">@style/Widget.EditText</item>
 
