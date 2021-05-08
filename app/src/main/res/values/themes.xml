@@ -81,7 +81,7 @@
 
         <!-- Customize your theme here. -->
         <item name="primaryButtonStyle">@style/Widget.MaterialComponents.Button.OutlinedButton.PrimaryButton</item>
-        <item name="textButtonStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
+        <item name="textButtonStyle">@style/Widget.TextButton</item>
         <item name="textAppearanceButton">@style/TextAppearance.MaterialComponents.Button.BaseButton</item>
         <item name="viewPagerDotsStyle">@style/Widget.ViewPageIndicator</item>
         <item name="gradientBackground">@drawable/gradient_blue</item>

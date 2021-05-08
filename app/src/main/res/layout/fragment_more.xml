@@ -38,4 +38,44 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/viewMore" />
+
+    <Button
+        android:id="@+id/btFavoritosMore"
+        style="?textButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:text="@string/link_favoritos"
+        app:icon="@drawable/ic_star_empty"
+        app:iconPadding="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/viewMore" />
+
+    <Button
+        android:id="@+id/btVistosMore"
+        style="?textButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:text="@string/link_vistos"
+        app:icon="@drawable/ic_eye"
+        app:iconPadding="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btFavoritosMore" />
+
+    <Button
+        android:id="@+id/btAjudaMore"
+        style="?textButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:text="@string/link_ajuda"
+        app:icon="@drawable/ic_help"
+        app:iconPadding="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btVistosMore" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
