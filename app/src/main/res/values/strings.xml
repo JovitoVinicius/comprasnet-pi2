@@ -36,13 +36,14 @@
     /** Tela Minha Conta - Login **/
     <string name="title_minha_conta">Minha conta</string>
     <string name="field_email">Email</string>
-    <string name="field_user">Usuário</string>
     <string name="field_password">Senha</string>
     <string name="button_login">Login</string>
     <string name="link_forgot">Esqueceu a senha?</string>
     <string name="link_signup">Ainda não tem login? Cadastre-se</string>
 
     /** Tela Minha Conta - Logado **/
+    <string name="field_user">Usuário: </string>
+    <string name="field_email_my_account">Email: </string>
     <string name="button_change_password">Mudar Senha</string>
     <string name="button_exit">Sair</string>
     <string name="link_delete_account">Apagar conta</string>
@@ -65,6 +66,7 @@
 
     /** Tela Minha Conta - Cadastro **/
     <string name="title_signup">Cadastro</string>
+    <string name="field_type_name">Digite seu nome completo</string>
     <string name="field_type_password">Digite a senha</string>
     <string name="field_type_password_repeat">Confirme a senha</string>
     <string name="button_signup">Cadastrar</string>
