@@ -8,11 +8,13 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.siasg.comprasnet.ui.fragment.main.HomeFragment"
-        android:label="@string/Home" />
+        android:label="@string/Home"
+        tools:layout="@layout/fragment_home"/>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.siasg.comprasnet.ui.fragment.login.LoginFragment"
-        android:label="@string/title_minha_conta" />
+        android:label="@string/title_minha_conta"
+        tools:layout="@layout/fragment_login"/>
     <fragment
         android:id="@+id/moreFragment"
         android:name="com.siasg.comprasnet.ui.fragment.more.MoreFragment"
