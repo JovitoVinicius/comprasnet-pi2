@@ -2,6 +2,7 @@
 <resources>
     <attr format="reference"    name="primaryButtonStyle"/>
     <attr format="reference"    name="textButtonStyle"/>
+    <attr format="reference"    name="iconButtonStyle"/>
     <attr format="reference"    name="viewPagerDotsStyle"/>
     <attr format="reference"    name="subtitleStyle"/>
     <attr format="reference"    name="titleStyle"/>
