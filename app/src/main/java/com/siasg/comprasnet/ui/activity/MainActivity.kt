@@ -2,50 +2,45 @@ package com.siasg.comprasnet
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.app.ActionBar
-import androidx.fragment.app.Fragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.siasg.comprasnet.R
-import com.siasg.comprasnet.ui.fragment.login.LoginFragment
-import com.siasg.comprasnet.ui.fragment.main.HomeFragment
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI.setupWithNavController
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
+import com.siasg.comprasnet.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    lateinit var toolbar: ActionBar
-
-    private fun openFragment(fragment: Fragment) {
-        val transaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.container, fragment)
-        transaction.addToBackStack(null)
-        transaction.commit()
-    }
-
-    private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
-        when (item.itemId) {
-            R.id.menu_home  ->  {
-                val homeFragment = HomeFragment()
-                openFragment(homeFragment)
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.menu_conta -> {
-                val accountFragment = LoginFragment()
-                openFragment(accountFragment)
-                return@OnNavigationItemSelectedListener true
-            }
-            R.id.menu_mapa  ->  return@OnNavigationItemSelectedListener true
-            R.id.menu_mais  ->  return@OnNavigationItemSelectedListener true
-        }
-        false
-    }
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        val bottomNavigation: BottomNavigationView = findViewById(R.id.barNavigationView)
-        bottomNavigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setupViews()
     }
 
+    fun setupViews() {
+        // Finding the Navigation Controller
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragNavHost) as NavHostFragment
+        val navController = navHostFragment.navController
+
+        // Setting Navigation Controller with the BottomNavigationView
+        binding.barNavigationView.setupWithNavController(navController)
+
+        // Setting Up ActionBar with Navigation Controller
+        val appBarConfiguration = AppBarConfiguration(
+                topLevelDestinationIds = setOf (
+                        R.id.homeFragment,
+                        R.id.loginFragment,
+                        R.id.mapsFragment,
+                        R.id.moreFragment
+                )
+        )
+        //setupActionBarWithNavController(navController, appBarConfiguration)
+    }
 }

@@ -71,7 +71,11 @@
     <string name="field_signup_success">Um email de confirmação foi enviado a sua caixa de entrada</string>
     <string name="field_signup_failure">Houve um erro, não foi possível criar sua conta</string>
 
+    /** Tela Mapas **/
+    <string name="title_maps">Mapa</string>
+
     /** Tela Mais opções **/
+    <string name="title_more">Mais opções</string>
     <string name="link_favoritos">Favoritos</string>
     <string name="link_vistos">Vistos</string>
     <string name="link_ajuda">Ajuda</string>
