@@ -31,7 +31,7 @@
 
      -->
 
-    <style name="Theme.ComprasNet" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.ComprasNet" parent="Theme.AppCompat.Light.NoActionBar">
         <!--
             Primary brand color.
             A cor primária é a cor mais usada nas telas e nos componentes do aplicativo,

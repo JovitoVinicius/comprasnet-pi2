@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/menu_home"
+        android:id="@+id/homeFragment"
         android:icon="@drawable/ic_home"
-        android:title="Home"/>
+        android:title="@string/button_home"/>
 
     <item
-        android:id="@+id/menu_conta"
+        android:id="@+id/loginFragment"
         android:icon="@drawable/ic_account"
-        android:title="Conta"/>
+        android:title="@string/button_account"/>
 
     <item
-        android:id="@+id/menu_mapa"
+        android:id="@+id/mapsFragment"
         android:icon="@drawable/ic_maps"
-        android:title="Mapa"/>
+        android:title="@string/button_map"/>
 
     <item
-        android:id="@+id/menu_mais"
+        android:id="@+id/moreFragment"
         android:icon="@drawable/ic_more"
-        android:title="Mais"/>
+        android:title="@string/button_more"/>
 </menu>
