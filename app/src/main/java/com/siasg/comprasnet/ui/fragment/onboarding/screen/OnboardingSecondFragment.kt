@@ -6,15 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.siasg.comprasnet.R
+import com.siasg.comprasnet.databinding.FragmentOnboardingFirstBinding
+import com.siasg.comprasnet.databinding.FragmentOnboardingSecondBinding
 
 class OnboardingSecondFragment : Fragment() {
 
+    private lateinit var binding: FragmentOnboardingSecondBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_onboarding_second, container, false)
+        binding = FragmentOnboardingSecondBinding.inflate(inflater, container, false)
+        binding.lifecycleOwner = this
+
+        return binding.root
     }
 }

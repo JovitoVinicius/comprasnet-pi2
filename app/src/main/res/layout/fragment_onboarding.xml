@@ -33,6 +33,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="70dp"
             android:text="@string/button_start"
+            android:onClick="@{fragment::start}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

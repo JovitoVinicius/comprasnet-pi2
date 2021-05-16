@@ -6,15 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.siasg.comprasnet.R
+import com.siasg.comprasnet.databinding.FragmentLoginBinding
+import com.siasg.comprasnet.databinding.FragmentOnboardingFirstBinding
 
 class OnboardingFirstFragment : Fragment() {
+
+    private lateinit var binding: FragmentOnboardingFirstBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_onboarding_first, container, false)
+        binding = FragmentOnboardingFirstBinding.inflate(inflater, container, false)
+        binding.lifecycleOwner = this
+
+        return binding.root
     }
 
 

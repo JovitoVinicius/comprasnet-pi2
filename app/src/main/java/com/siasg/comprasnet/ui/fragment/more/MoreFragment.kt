@@ -6,15 +6,34 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.siasg.comprasnet.R
+import com.siasg.comprasnet.databinding.FragmentLoginBinding
+import com.siasg.comprasnet.databinding.FragmentMoreBinding
 
 class MoreFragment : Fragment() {
+
+    private lateinit var binding: FragmentMoreBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = FragmentMoreBinding.inflate(inflater, container, false)
+        binding.fragment = this
+        binding.lifecycleOwner = this
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_more, container, false)
+        return binding.root
+    }
+
+    fun irParaFavoritos(v: View){
+
+    }
+
+    fun irParaVistos(v: View){
+
+    }
+
+    fun irParaAjuda(v: View){
+
     }
 
 }

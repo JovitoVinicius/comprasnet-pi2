@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentManager
 import androidx.lifecycle.Lifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.siasg.comprasnet.R
 import com.siasg.comprasnet.databinding.FragmentOnboardingBinding
 import com.siasg.comprasnet.ui.adapter.OnboardingAdapter
 import com.siasg.comprasnet.ui.fragment.onboarding.screen.OnboardingFirstFragment
@@ -24,6 +26,7 @@ class OnboardingFragment : Fragment() {
     ): View? {
 
         binding = FragmentOnboardingBinding.inflate(inflater, container, false)
+        binding.fragment = this
         binding.lifecycleOwner = this
 
 
@@ -47,6 +50,10 @@ class OnboardingFragment : Fragment() {
 
         // Inflate the layout for this fragment
         return binding.root
+    }
+
+    fun start(v: View){
+        findNavController().navigate(R.id.bottom_navigation)
     }
 
 }
