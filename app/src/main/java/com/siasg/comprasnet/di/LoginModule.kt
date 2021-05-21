@@ -15,4 +15,5 @@ class LoginModule {
     @Provides
     fun provideFirebaseAuth() = Firebase.auth
 
+
 }
