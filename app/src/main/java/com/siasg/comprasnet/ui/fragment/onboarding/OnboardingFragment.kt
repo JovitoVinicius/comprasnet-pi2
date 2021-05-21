@@ -1,17 +1,16 @@
 package com.siasg.comprasnet.ui.fragment.onboarding
 
+import android.graphics.Color
 import android.os.Bundle
-import android.preference.PreferenceManager
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.FragmentManager
-import androidx.lifecycle.Lifecycle
+import android.view.Window
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.siasg.comprasnet.R
 import com.siasg.comprasnet.databinding.FragmentOnboardingBinding
+import com.siasg.comprasnet.ui.activity.SplashActivity
 import com.siasg.comprasnet.ui.adapter.OnboardingAdapter
 import com.siasg.comprasnet.ui.fragment.onboarding.screen.OnboardingFirstFragment
 import com.siasg.comprasnet.ui.fragment.onboarding.screen.OnboardingSecondFragment
@@ -24,10 +23,10 @@ class OnboardingFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentOnboardingBinding.inflate(inflater, container, false)
-        binding.fragment = this
         binding.lifecycleOwner = this
+        binding.fragment = this
 
         val listaFragmentos = arrayListOf(
             OnboardingFirstFragment(),
@@ -42,6 +41,8 @@ class OnboardingFragment : Fragment() {
         )
 
         binding.vpOnboarding.adapter = adaptador
+        binding.wormDotsIndicator.setViewPager2(binding.vpOnboarding)
+
 
         return binding.root
     }
