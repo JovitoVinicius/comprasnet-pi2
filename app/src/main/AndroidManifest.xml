@@ -10,7 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ComprasNet">
+        <activity android:name=".ui.activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <!-- Activity for login navigation -->
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -20,7 +26,5 @@
             </intent-filter>
         </activity>
     </application>
-
-
 
 </manifest>

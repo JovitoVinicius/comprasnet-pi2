@@ -1,6 +1,7 @@
 package com.siasg.comprasnet.ui.fragment.onboarding
 
 import android.os.Bundle
+import android.preference.PreferenceManager
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -24,20 +25,15 @@ class OnboardingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         binding = FragmentOnboardingBinding.inflate(inflater, container, false)
         binding.fragment = this
         binding.lifecycleOwner = this
 
-
-        //criar a fonte de dados
         val listaFragmentos = arrayListOf(
             OnboardingFirstFragment(),
             OnboardingSecondFragment(),
             OnboardingThirdFragment()
         )
-
-        // criar o adaptador
 
         val adaptador = OnboardingAdapter(
             listaFragmentos,
@@ -47,13 +43,12 @@ class OnboardingFragment : Fragment() {
 
         binding.vpOnboarding.adapter = adaptador
 
-
-        // Inflate the layout for this fragment
         return binding.root
     }
 
+
     fun start(v: View){
-        findNavController().navigate(R.id.bottom_navigation)
+        findNavController().navigate(R.id.action_onboardingFragment_to_mainActivity)
     }
 
 }

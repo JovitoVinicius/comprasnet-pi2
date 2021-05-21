@@ -13,22 +13,12 @@
         android:layout_height="match_parent"
         tools:context=".ui.fragment.onboarding.screen.OnboardingFirstFragment">
 
-        <View
-            android:id="@+id/viewOnboard1"
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:background="?gradientBackground"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/ivOnboarding1" />
-
         <ImageView
             android:id="@+id/ivOnboarding1"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:src="@drawable/onboarding_1"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvOnboarding1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -38,20 +28,10 @@
             android:id="@+id/tvOnboarding1"
             style="?titleStyle"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="33dp"
             android:layout_marginBottom="200dp"
             android:text="@string/text_onboarding1"
             android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="@+id/ivOnboarding1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <View
-            android:id="@+id/viewOnboard2"
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:background="?gradientBackground90"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

@@ -38,11 +38,13 @@
     <fragment
         android:id="@+id/forgotPasswordFragment"
         android:name="com.siasg.comprasnet.ui.fragment.login.ForgotPasswordFragment"
-        android:label="ForgotPasswordFragment" />
+        android:label="ForgotPasswordFragment"
+        tools:layout="@layout/fragment_forgot_password"/>
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.siasg.comprasnet.ui.fragment.login.SignUpFragment"
-        android:label="SignUpFragment" />
+        android:label="SignUpFragment"
+        tools:layout="@layout/fragment_sign_up"/>
     <fragment
         android:id="@+id/myAccountFragment"
         android:name="com.siasg.comprasnet.ui.fragment.login.MyAccountFragment"

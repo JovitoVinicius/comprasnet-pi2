@@ -49,6 +49,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/viewLogin" />
 
+        <!-- AQUI -->
+
         <ImageView
             android:id="@+id/ivUserIconLogin"
             android:layout_width="wrap_content"
@@ -148,8 +150,6 @@
                 android:hint="@string/field_password"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
-
-        <!-- AQUI -->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
