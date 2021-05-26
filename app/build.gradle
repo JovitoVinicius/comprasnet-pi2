@@ -44,8 +44,11 @@ dependencies {
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
+    /** Map */
+    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+
     /** Kotlin Libraries */
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.4.32"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.2.0'
 
     /** Constraint Layout */
