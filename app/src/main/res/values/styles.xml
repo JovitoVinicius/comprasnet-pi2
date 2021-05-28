@@ -15,6 +15,14 @@
         <item name="rippleColor">?attr/colorPrimary</item>
     </style>
 
+    <style name="Widget.MaterialComponents.Button.OutlinedButton.HomeButton">
+        <item name="cornerRadius">17dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
+        <item name="rippleColor">?attr/colorPrimary</item>
+    </style>
+
     <style name="Widget.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">?attr/colorOnPrimary</item>
         <item name="iconTint">?attr/colorOnPrimary</item>

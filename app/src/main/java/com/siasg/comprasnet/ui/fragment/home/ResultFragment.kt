@@ -16,11 +16,11 @@ class ResultFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentResultBinding.inflate(inflater, container, false)
         binding.fragment = this
         binding.lifecycleOwner = this
-        // Inflate the layout for this fragment
+
         return binding.root
     }
 
