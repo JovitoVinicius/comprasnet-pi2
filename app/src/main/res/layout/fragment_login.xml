@@ -53,13 +53,14 @@
 
         <ImageView
             android:id="@+id/ivUserIconLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="178dp"
-            android:src="@drawable/icon_user"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_account"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/viewLogin" />
+            app:layout_constraintTop_toBottomOf="@+id/viewLogin"
+            app:tint="?colorOnSurface" />
 
         <Button
             android:id="@+id/btLogin"
@@ -93,13 +94,11 @@
             android:id="@+id/tvLoginSignUp"
             style="?subtitleStyle"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="@{fragment::signUp}"
             android:text="@string/link_signup"
             android:textAlignment="center"
-            android:onClick="@{fragment::signUp}"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"

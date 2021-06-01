@@ -29,7 +29,20 @@
         android:id="@+id/moreFragment"
         android:name="com.siasg.comprasnet.ui.fragment.more.MoreFragment"
         android:label="@string/title_more"
-        tools:layout="@layout/fragment_more" />
+        tools:layout="@layout/fragment_more" >
+        <action
+            android:id="@+id/action_moreFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_moreFragment_to_helpFragment"
+            app:destination="@id/helpFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mapsFragment"
         android:name="com.siasg.comprasnet.ui.fragment.maps.MapsFragment"
@@ -50,4 +63,19 @@
         android:name="com.siasg.comprasnet.ui.fragment.login.MyAccountFragment"
         android:label="fragment_my_account"
         tools:layout="@layout/fragment_my_account" />
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.siasg.comprasnet.ui.fragment.more.FavoritesFragment"
+        android:label="FavoritesFragment"
+        tools:layout="@layout/fragment_favorites"/>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.siasg.comprasnet.ui.fragment.more.HistoryFragment"
+        android:label="HistoryFragment"
+        tools:layout="@layout/fragment_history"/>
+    <fragment
+        android:id="@+id/helpFragment"
+        android:name="com.siasg.comprasnet.ui.fragment.more.HelpFragment"
+        android:label="HelpFragment"
+        tools:layout="@layout/fragment_help"/>
 </navigation>
