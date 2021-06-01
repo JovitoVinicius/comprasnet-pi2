@@ -36,10 +36,10 @@
         <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
             android:id="@+id/wormDotsIndicator"
             style="?attr/viewPagerDotsStyle"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
-            android:layout_marginEnd="150dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toTopOf="@+id/btStartOnBoarding"
             app:layout_constraintEnd_toEndOf="parent"

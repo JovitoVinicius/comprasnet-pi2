@@ -49,13 +49,14 @@
 
     <ImageView
         android:id="@+id/ivUserIconLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="178dp"
-        android:src="@drawable/icon_user"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/viewMyAccount" />
+        app:layout_constraintTop_toBottomOf="@+id/viewMyAccount"
+        app:tint="?colorOnSurface" />
 
     <TextView
         android:id="@+id/tvUserMyAccount"
@@ -92,7 +93,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="100dp"
         android:text="@string/button_change_password"
         app:layout_constraintEnd_toEndOf="parent"
