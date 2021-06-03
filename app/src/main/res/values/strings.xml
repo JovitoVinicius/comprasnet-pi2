@@ -58,7 +58,7 @@
     <string name="field_change_failure">Houve um erro, sua senha não foi alterada.</string>
 
     /** Tela Minha Conta - Esqueci a senha **/
-    <string name="title_esqueci_senha">Esqueci a Senha</string>
+    <string name="title_esqueci_senha">Alteração de senha</string>
     <string name="field_type_email">Digite seu email</string>
     <string name="button_send_email">Enviar email</string>
     <string name="field_forgot_success">Um email de recuperação foi enviado a sua caixa de entrada</string>
@@ -81,8 +81,5 @@
     <string name="link_favoritos">Favoritos</string>
     <string name="link_vistos">Vistos</string>
     <string name="link_ajuda">Ajuda</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
 
 </resources>

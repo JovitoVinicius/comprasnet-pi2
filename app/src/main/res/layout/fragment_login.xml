@@ -84,7 +84,9 @@
             android:layout_marginTop="15dp"
             android:text="@string/link_forgot"
             android:textAlignment="center"
-            android:onClick="@{fragment::forgot}"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{fragment::irParaForgot}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.511"
             app:layout_constraintStart_toStartOf="parent"
@@ -96,7 +98,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:onClick="@{fragment::signUp}"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{fragment::irParaSignUp}"
             android:text="@string/link_signup"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
@@ -123,6 +127,7 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextEditInputEmailLogin"
                 style="?layoutEditTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -143,6 +148,7 @@
             app:layout_constraintTop_toTopOf="@+id/glLogin">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TextEditInputPasswordLogin"
                 style="?layoutEditTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
