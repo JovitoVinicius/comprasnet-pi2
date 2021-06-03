@@ -58,10 +58,16 @@ class LoginFragment : Fragment() {
     fun login(v: View){
         val email: String = binding.TextEditInputEmailLogin.text.toString()
         val password: String = binding.TextEditInputPasswordLogin.text.toString()
-        signIn(email, password)
+
+        if (email.isEmpty() || password.isEmpty()){
+            Toast.makeText(context, "Login falhou", Toast.LENGTH_SHORT).show()
+        } else {
+            signIn(email, password)
+        }
+
         val user = auth.currentUser
         if (user != null) {
-            findNavController().navigate(R.id.action_loginFragment_to_myAccountFragment)
+            irParaConta()
         }
     }
 

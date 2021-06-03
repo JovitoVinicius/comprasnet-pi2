@@ -31,9 +31,7 @@ class ForgotPasswordFragment : Fragment() {
         return binding.root
     }
 
-    private fun passwordReset() {
-        val email = binding.TextEditEmailAddress.text.toString()
-
+    private fun passwordReset(email: String) {
         Firebase.auth.sendPasswordResetEmail(email).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Log.d(TAG, "Email sent.")
@@ -44,8 +42,13 @@ class ForgotPasswordFragment : Fragment() {
 
     @SuppressWarnings
     fun irParaLogin(v: View){
-        passwordReset()
-        findNavController().navigate(R.id.action_forgotPasswordFragment_to_loginFragment)
+        val email = binding.TextEditEmailAddress.text.toString()
+        if (email.isEmpty())
+            Toast.makeText(context, "Um dos campos se encontra vazio", Toast.LENGTH_SHORT).show()
+        else {
+            passwordReset(email)
+            findNavController().navigate(R.id.action_forgotPasswordFragment_to_loginFragment)
+        }
     }
 
 

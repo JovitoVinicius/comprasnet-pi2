@@ -49,10 +49,20 @@ class SignUpFragment : Fragment() {
 
     @SuppressWarnings
     fun irParaLogin(v: View) {
+        val nome: String = binding.TextEditInputName.text.toString()
         val email: String = binding.TextEditInputEmail.text.toString()
-        val password: String = binding.TextEditInputPassword2.text.toString()
-        createAccount(email, password)
-        findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
+        val password1: String = binding.TextEditInputPassword.text.toString()
+        val password2: String = binding.TextEditInputPassword2.text.toString()
+
+        if (email.isEmpty() || nome.isEmpty() || password1.isEmpty() || password2.isEmpty())
+            Toast.makeText(context, "Alguns dos campos se encontra vazio", Toast.LENGTH_SHORT).show()
+        else {
+            if (password1 == password2) {
+                createAccount(email, password2)
+                findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
+            } else
+                Toast.makeText(context, "As senhas não conferem, digite novamente", Toast.LENGTH_SHORT).show()
+        }
     }
 
 
