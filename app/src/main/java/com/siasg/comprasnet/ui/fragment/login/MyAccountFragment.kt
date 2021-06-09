@@ -79,7 +79,6 @@ class MyAccountFragment : Fragment() {
 
     @SuppressWarnings
     fun irParaForgot(v: View){
-        Firebase.auth.signOut()
         findNavController().navigate(R.id.action_myAccountFragment_to_forgotPasswordFragment)
     }
 

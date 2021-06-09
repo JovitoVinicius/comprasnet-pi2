@@ -47,6 +47,7 @@ class ForgotPasswordFragment : Fragment() {
             Toast.makeText(context, "Um dos campos se encontra vazio", Toast.LENGTH_SHORT).show()
         else {
             passwordReset(email)
+            Firebase.auth.signOut()
             findNavController().navigate(R.id.action_forgotPasswordFragment_to_loginFragment)
         }
     }
