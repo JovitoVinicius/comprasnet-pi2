@@ -32,7 +32,7 @@ class SplashFragment : Fragment() {
         val currentUser = auth.currentUser
 
         GlobalScope.launch(context = Dispatchers.Main) {
-            delay(1500)
+            delay(1000)
             if (currentUser != null) {
                 startMain()
             } else {

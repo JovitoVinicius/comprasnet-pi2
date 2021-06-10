@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.siasg.comprasnet.ui.fragment.home.HomeFragment"
         android:label="@string/Home"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.siasg.comprasnet.ui.fragment.login.LoginFragment"
@@ -93,4 +97,9 @@
         android:name="com.siasg.comprasnet.ui.fragment.more.HelpFragment"
         android:label="HelpFragment"
         tools:layout="@layout/fragment_help"/>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.siasg.comprasnet.ui.fragment.home.ResultFragment"
+        android:label="ResultFragment"
+        tools:layout="@layout/fragment_result"/>
 </navigation>

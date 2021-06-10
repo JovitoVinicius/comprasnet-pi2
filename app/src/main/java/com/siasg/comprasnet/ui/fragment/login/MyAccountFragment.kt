@@ -68,7 +68,7 @@ class MyAccountFragment : Fragment() {
     @SuppressWarnings
     fun deleteUser(v: View){
         delUser()
-        findNavController().navigate(R.id.action_myAccountFragment_to_loginFragment)
+        irParaLogin()
     }
 
     @SuppressWarnings

@@ -39,8 +39,8 @@ class SignUpFragment : Fragment() {
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 Log.d(TAG, "createUserWithEmail:success")
+                Toast.makeText(context, "Conta criada, faça login", Toast.LENGTH_SHORT).show()
             } else {
-                // If sign in fails, display a message to the user.
                 Log.w(TAG, "createUserWithEmail:failure", task.exception)
                 Toast.makeText(context, "Houve um erro, não foi possível criar sua conta", Toast.LENGTH_SHORT).show()
             }

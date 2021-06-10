@@ -24,6 +24,11 @@
     <string name="button_vencem_90a180">Vencem (90 a 180 dias)</string>
     <string name="button_vencem_mais180">Vencem (+ 180 dias)</string>
 
+    /** Tela Resultados **/
+    <string name="title_results">Resultados</string>
+    <string name="field_ver">Ver</string>
+    <string name="field_favoritar">Favoritar</string>
+
     /** Tela Filtros **/
     <string name="title_filtro_de_pesquisa">Filtro de Pesquisa</string>
     <string name="field_orgao">Orgão</string>

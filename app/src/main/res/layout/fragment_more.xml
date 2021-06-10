@@ -74,7 +74,7 @@
         android:layout_marginEnd="70dp"
         android:text="@string/link_vistos"
         android:onClick="@{fragment::irParaVistos}"
-        app:icon="@drawable/ic_eye"
+        app:icon="@drawable/ic_eye_empty"
         app:iconPadding="30dp"
         app:layout_constraintEnd_toStartOf="@+id/btArrow2More"
         app:layout_constraintStart_toStartOf="parent"

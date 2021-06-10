@@ -35,7 +35,7 @@ class ForgotPasswordFragment : Fragment() {
         Firebase.auth.sendPasswordResetEmail(email).addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Log.d(TAG, "Email sent.")
-                    Toast.makeText(context, "Um email de recuperação foi enviado a sua caixa de entrada", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Um email de mudança de senha foi enviado para sua caixa de entrada", Toast.LENGTH_SHORT).show()
                 }
             }
     }

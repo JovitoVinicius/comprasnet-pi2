@@ -25,7 +25,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentMapsBinding.inflate(inflater, container, false)
         binding.fragment = this
         binding.lifecycleOwner = this
