@@ -156,6 +156,14 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
             .title("Ministerio Controladoria-Geral da União - GGU")
         map.addMarker(pinoGGU)
 
+        val posicaoCN = LatLng(-15.799490998064154, -47.86417119171833)
+        val pinoCN = MarkerOptions().position(posicaoCN).title("Congresso Nacional")
+        map.addMarker(pinoCN)
+
+        val posicaoSF = LatLng(-15.797560493437798, -47.863409444377716)
+        val pinoSF = MarkerOptions().position(posicaoSF).title("Senado Federal")
+        map.addMarker(pinoSF)
+
         val esplanada = LatLng(-15.79687874712141, -47.87007622870773)
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(esplanada, 13f))
 
