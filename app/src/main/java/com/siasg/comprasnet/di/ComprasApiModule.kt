@@ -1,6 +1,5 @@
 package com.siasg.comprasnet.di
 
-import com.google.gson.Gson
 import com.siasg.comprasnet.domain.ResultsApi
 import dagger.Module
 import dagger.Provides
@@ -10,7 +9,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Headers
-import java.io.FileReader
+import java.util.ArrayList
 
 
 @Module
@@ -29,11 +28,10 @@ class ComprasApiModule {
     fun providesComprasService(retrofit: Retrofit): ComprasApiService {
         return retrofit.create(ComprasApiService::class.java)
     }
-
 }
 
 interface ComprasApiService {
-    @GET("contratos.json?uasg=20001&order_by=uasg&order=desc")
+    @GET("contratos.json?")
     @Headers("Content-Type: application/json")
     suspend fun searchContrato(): ResultsApi
 }

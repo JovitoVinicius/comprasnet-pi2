@@ -12,7 +12,6 @@ import com.siasg.comprasnet.ui.adapter.ContratosListAdapter
 import com.siasg.comprasnet.viewmodel.ComprasApiViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
-
 @AndroidEntryPoint
 class ResultFragment : Fragment() {
 
@@ -26,7 +25,6 @@ class ResultFragment : Fragment() {
         binding = FragmentResultBinding.inflate(inflater, container, false)
         binding.fragment = this
         binding.lifecycleOwner = this
-
         return binding.root
     }
 
@@ -35,9 +33,11 @@ class ResultFragment : Fragment() {
 
         binding.rvResultados.layoutManager = LinearLayoutManager(context)
 
+        viewmodel.loadData()
+
         viewmodel.resultado.observe(viewLifecycleOwner) { listaContratos ->
             binding.rvResultados.adapter = ContratosListAdapter(listaContratos)
         }
-    }
 
+    }
 }

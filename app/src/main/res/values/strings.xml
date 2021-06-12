@@ -29,6 +29,14 @@
     <string name="field_ver">Ver</string>
     <string name="field_favoritar">Favoritar</string>
 
+    /** Tela Detalhes **/
+    <string name="title_details">Detalhes</string>
+
+    /** Tela Alt **/
+    <string name="title_alt">Alt</string>
+    <string name="button_api">Request API</string>
+    <string name="button_offline">JSON Local</string>
+
     /** Tela Filtros **/
     <string name="title_filtro_de_pesquisa">Filtro de Pesquisa</string>
     <string name="field_orgao">Orgão</string>
@@ -86,5 +94,7 @@
     <string name="link_favoritos">Favoritos</string>
     <string name="link_vistos">Vistos</string>
     <string name="link_ajuda">Ajuda</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

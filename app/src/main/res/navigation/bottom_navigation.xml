@@ -12,7 +12,10 @@
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_resultFragment"
-            app:destination="@id/resultFragment" />
+            app:destination="@id/resultLocalFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_altFragment"
+            app:destination="@id/altFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -40,9 +43,6 @@
         <action
             android:id="@+id/action_moreFragment_to_favoritesFragment"
             app:destination="@id/favoritesFragment" />
-        <action
-            android:id="@+id/action_moreFragment_to_historyFragment"
-            app:destination="@id/historyFragment" />
         <action
             android:id="@+id/action_moreFragment_to_helpFragment"
             app:destination="@id/helpFragment" />
@@ -88,18 +88,47 @@
         android:label="FavoritesFragment"
         tools:layout="@layout/fragment_favorites"/>
     <fragment
-        android:id="@+id/historyFragment"
-        android:name="com.siasg.comprasnet.ui.fragment.more.HistoryFragment"
-        android:label="HistoryFragment"
-        tools:layout="@layout/fragment_history"/>
-    <fragment
         android:id="@+id/helpFragment"
         android:name="com.siasg.comprasnet.ui.fragment.more.HelpFragment"
         android:label="HelpFragment"
         tools:layout="@layout/fragment_help"/>
     <fragment
+        android:id="@+id/resultLocalFragment"
+        android:name="com.siasg.comprasnet.ui.fragment.home.ResultLocalFragment"
+        android:label="resultLocalFragment"
+        tools:layout="@layout/fragment_result_local">
+        <action
+            android:id="@+id/action_resultFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/altFragment"
+        android:name="com.siasg.comprasnet.ui.fragment.home.AltFragment"
+        android:label="AltFragment"
+        tools:layout="@layout/fragment_alt">
+        <action
+            android:id="@+id/action_altFragment_to_resultFragment"
+            app:destination="@id/resultLocalFragment" />
+        <action
+            android:id="@+id/action_altFragment_to_resultFragment2"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.siasg.comprasnet.ui.fragment.home.DetailsFragment"
+        android:label="DetailsFragment"
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="detailArgs"
+            app:argType="string" />
+    </fragment>
+    <fragment
         android:id="@+id/resultFragment"
         android:name="com.siasg.comprasnet.ui.fragment.home.ResultFragment"
         android:label="ResultFragment"
-        tools:layout="@layout/fragment_result"/>
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/action_resultFragment_to_detailsFragment2"
+            app:destination="@id/detailsFragment" />
+    </fragment>
 </navigation>

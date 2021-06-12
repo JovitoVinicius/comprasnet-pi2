@@ -46,13 +46,9 @@ class MoreFragment : Fragment() {
             findNavController().navigate(R.id.action_moreFragment_to_favoritesFragment)
     }
 
-    fun irParaVistos(v: View){
-        if (checarLogin() == 0)
-            findNavController().navigate(R.id.action_moreFragment_to_historyFragment)
-    }
 
     fun irParaAjuda(v: View){
-
+        findNavController().navigate(R.id.action_moreFragment_to_helpFragment)
     }
 
 }

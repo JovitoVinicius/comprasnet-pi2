@@ -1,8 +1,6 @@
 package com.siasg.comprasnet.interactor
 
-import com.siasg.comprasnet.domain.ContratoDados
 import com.siasg.comprasnet.domain.Embedded
-import com.siasg.comprasnet.domain.ResultsApi
 import com.siasg.comprasnet.repository.ComprasApiRepo
 import javax.inject.Inject
 

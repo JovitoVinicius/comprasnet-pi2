@@ -1,11 +1,7 @@
 package com.siasg.comprasnet.domain
 
-import android.os.Build
-import androidx.annotation.RequiresApi
-import java.time.LocalDate
-import java.time.LocalDateTime
-import java.time.Period
 import java.time.format.DateTimeFormatter
+import java.util.ArrayList
 
 data class ResultsApi(
     val _embedded: Embedded,
@@ -26,11 +22,9 @@ data class LinksX(
 
 data class ContratoDados(
     val _links: Links,
-    val cnpj_contratada: String,
     val codigo_contrato: Int,
     val cpfContratada: Any,
     val data_assinatura: String,
-    var color: String,
     val data_inicio_vigencia: String,
     val data_termino_vigencia: String,
     val fundamento_legal: String,
@@ -44,8 +38,7 @@ data class ContratoDados(
     val objeto: String,
     val origem_licitacao: String,
     val uasg: Int,
-    val valor_inicial: Double,
-    val nome: String = "${uasg} - ${origem_licitacao}"
+    val valor_inicial: Double
 )
 
 data class Links(

@@ -7,6 +7,9 @@
         <variable
             name="contrato"
             type="com.siasg.comprasnet.domain.ContratoDados" />
+        <variable
+            name="fragment"
+            type="com.siasg.comprasnet.ui.fragment.home.ResultLocalFragment" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -47,68 +50,62 @@
                 <TextView
                     android:id="@+id/card_title"
                     style="?textAppearanceBody1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="12dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginEnd="12dp"
                     android:ellipsize="end"
-                    android:text="@{contrato.nome}"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
                     android:textColor="@color/white"
+                    android:text="@{contrato.uasg}"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/card_subtitle"
                     style="?textAppearanceSubtitle1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:ellipsize="end"
+                    android:maxLines="1"
+                    android:scrollHorizontally="true"
                     android:text="@{contrato.identificador}"
+                    app:layout_constraintEnd_toEndOf="@+id/card_title"
                     app:layout_constraintStart_toStartOf="@+id/card_title"
                     app:layout_constraintTop_toBottomOf="@+id/card_title" />
 
                 <TextView
                     android:id="@+id/card_subtitle2"
                     style="?textAppearanceSubtitle1"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:ellipsize="end"
-                    android:text="@{contrato._links.fornecedor.title}"
+                    android:maxLines="2"
+                    android:scrollHorizontally="true"
+                    android:text="@{contrato.objeto}"
+                    app:layout_constraintEnd_toEndOf="@+id/card_subtitle"
                     app:layout_constraintStart_toStartOf="@+id/card_subtitle"
                     app:layout_constraintTop_toBottomOf="@+id/card_subtitle" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btCardVer"
-                    style="?primaryButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="24dp"
-                    android:ellipsize="end"
-                    android:text="@string/field_ver"
-                    android:textSize="18sp"
-                    app:icon="@drawable/ic_eye_empty"
-                    app:layout_constraintEnd_toStartOf="@+id/btCardFavoritar"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/card_subtitle2" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btCardFavoritar"
                     style="?primaryButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
+                    android:layout_marginStart="70dp"
                     android:layout_marginTop="16dp"
-                    android:layout_marginEnd="24dp"
+                    android:layout_marginEnd="70dp"
                     android:ellipsize="end"
                     android:text="@string/field_favoritar"
                     android:textSize="18sp"
                     app:icon="@drawable/ic_star_empty"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/btCardVer"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/card_subtitle2" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>

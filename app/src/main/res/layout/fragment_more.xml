@@ -65,22 +65,6 @@
         app:layout_constraintTop_toTopOf="@+id/viewMore" />
 
     <Button
-        android:id="@+id/btVistosMore"
-        style="?textButtonStyle"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="46dp"
-        android:layout_marginEnd="70dp"
-        android:text="@string/link_vistos"
-        android:onClick="@{fragment::irParaVistos}"
-        app:icon="@drawable/ic_eye_empty"
-        app:iconPadding="30dp"
-        app:layout_constraintEnd_toStartOf="@+id/btArrow2More"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btFavoritosMore" />
-
-    <Button
         android:id="@+id/btAjudaMore"
         style="?textButtonStyle"
         android:layout_width="0dp"
@@ -88,13 +72,13 @@
         android:layout_marginStart="56dp"
         android:layout_marginTop="46dp"
         android:layout_marginEnd="70dp"
-        android:text="@string/link_ajuda"
         android:onClick="@{fragment::irParaAjuda}"
+        android:text="@string/link_ajuda"
         app:icon="@drawable/ic_help"
         app:iconPadding="30dp"
         app:layout_constraintEnd_toStartOf="@+id/btArrow3More"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btVistosMore" />
+        app:layout_constraintTop_toBottomOf="@+id/btFavoritosMore" />
 
     <Button
         android:id="@+id/btArrow1More"
@@ -109,44 +93,19 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/btArrow2More"
-        style="?textButtonStyle"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="57dp"
-        android:layout_marginBottom="33dp"
-        android:onClick="@{fragment::irParaVistos}"
-        app:icon="@drawable/ic_right_arrow"
-        app:layout_constraintBottom_toTopOf="@+id/vLine2"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
         android:id="@+id/btArrow3More"
         style="?textButtonStyle"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="33dp"
         android:layout_marginEnd="57dp"
         android:onClick="@{fragment::irParaAjuda}"
         app:icon="@drawable/ic_right_arrow"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vLine2" />
+        app:layout_constraintTop_toBottomOf="@+id/vLine1" />
 
     <View
         android:id="@+id/vLine1"
-        android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginEnd="56dp"
-        android:background="?colorOnPrimary"
-        app:layout_constraintBottom_toTopOf="@+id/btVistosMore"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btFavoritosMore" />
-
-    <View
-        android:id="@+id/vLine2"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_marginStart="56dp"
@@ -156,7 +115,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btVistosMore" />
+        app:layout_constraintTop_toBottomOf="@+id/btFavoritosMore" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
