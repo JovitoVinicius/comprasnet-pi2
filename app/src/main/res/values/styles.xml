@@ -19,7 +19,7 @@
         <item name="cornerRadius">17dp</item>
         <item name="android:paddingTop">15dp</item>
         <item name="android:paddingBottom">15dp</item>
-        <item name="android:textColor">?attr/colorOnSurface</item>
+        <item name="android:textColor">?attr/colorOnError</item>
         <item name="rippleColor">?attr/colorPrimary</item>
     </style>
 

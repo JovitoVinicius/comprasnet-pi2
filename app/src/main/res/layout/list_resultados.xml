@@ -85,28 +85,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:ellipsize="end"
-                    android:maxLines="2"
+                    android:maxLines="5"
                     android:scrollHorizontally="true"
                     android:text="@{contrato.objeto}"
                     app:layout_constraintEnd_toEndOf="@+id/card_subtitle"
                     app:layout_constraintStart_toStartOf="@+id/card_subtitle"
                     app:layout_constraintTop_toBottomOf="@+id/card_subtitle" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btCardFavoritar"
-                    style="?primaryButtonStyle"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="70dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="70dp"
-                    android:ellipsize="end"
-                    android:text="@string/field_favoritar"
-                    android:textSize="18sp"
-                    app:icon="@drawable/ic_star_empty"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/card_subtitle2" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

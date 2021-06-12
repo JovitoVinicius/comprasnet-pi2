@@ -61,7 +61,7 @@
             Error color indica erro nos componentes como texto inválido em um campo de texto.
         -->
         <item name="colorError">@color/dark_red_1</item>
-        <item name="colorOnError">@color/dark_gray</item>
+        <item name="colorOnError">@color/white</item>
 
         <!--
             Background color é usada em componentes que rolagem como a ScrollView e Listas.
