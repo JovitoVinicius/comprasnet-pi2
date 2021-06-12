@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.siasg.comprasnet.R
 import com.siasg.comprasnet.databinding.FragmentHomeBinding
 import com.siasg.comprasnet.viewmodel.ComprasApiViewModel
@@ -17,6 +20,7 @@ class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private val viewmodel: ComprasApiViewModel by viewModels()
+    private lateinit var auth: FirebaseAuth
     var filter: Int = 0
     var search: String = ""
 
@@ -30,8 +34,8 @@ class HomeFragment : Fragment() {
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onStart() {
+        super.onStart()
     }
 
     fun pesquisar(v: View){
@@ -41,37 +45,64 @@ class HomeFragment : Fragment() {
     }
 
     fun irParaResultTotal(v: View){
-        val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
-        findNavController().navigate(action)
+        if (checarLogin()==0) {
+            val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
+            findNavController().navigate(action)
+        }
     }
 
     fun irParaResult30(v: View){
-        filter = R.color.red_vencem_30dias
-        val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
-        findNavController().navigate(action)
+        if (checarLogin()==0) {
+            filter = R.color.red_vencem_30dias
+            val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
+            findNavController().navigate(action)
+        }
     }
 
     fun irParaResult60(v: View){
-        filter = R.color.orange_vencem_30_60
-        val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
-        findNavController().navigate(action)
+        if (checarLogin()==0) {
+            filter = R.color.orange_vencem_30_60
+            val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
+            findNavController().navigate(action)
+        }
     }
 
     fun irParaResult90(v: View){
-        filter = R.color.yellow_vencem_60_90
-        val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
-        findNavController().navigate(action)
+        if (checarLogin()==0) {
+            filter = R.color.yellow_vencem_60_90
+            val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
+            findNavController().navigate(action)
+        }
     }
 
     fun irParaResult180(v: View){
-        filter = R.color.blue_vencem_90_180
-        val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
-        findNavController().navigate(action)
+        if (checarLogin()==0) {
+            filter = R.color.blue_vencem_90_180
+            val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
+            findNavController().navigate(action)
+        }
     }
 
     fun irParaResult180mais(v: View){
-        filter = R.color.blue_vencem_180
-        val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
-        findNavController().navigate(action)
+        if (checarLogin()==0) {
+            filter = R.color.blue_vencem_180
+            val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
+            findNavController().navigate(action)
+        }
+    }
+
+    fun irParaLogin(){
+        findNavController().navigate(R.id.action_homeFragment_to_loginFragment)
+    }
+
+    fun checarLogin(): Int {
+        auth = Firebase.auth
+        val currentUser = auth.currentUser
+        return if (currentUser != null){
+            0
+        } else {
+            irParaLogin()
+            1
+        }
     }
 }
