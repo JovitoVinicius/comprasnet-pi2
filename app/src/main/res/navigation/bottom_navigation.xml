@@ -41,9 +41,6 @@
             android:id="@+id/action_moreFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
         <action
-            android:id="@+id/action_moreFragment_to_favoritesFragment"
-            app:destination="@id/favoritesFragment" />
-        <action
             android:id="@+id/action_moreFragment_to_helpFragment"
             app:destination="@id/helpFragment" />
     </fragment>
@@ -83,11 +80,6 @@
             app:destination="@id/forgotPasswordFragment" />
     </fragment>
     <fragment
-        android:id="@+id/favoritesFragment"
-        android:name="com.siasg.comprasnet.ui.fragment.more.FavoritesFragment"
-        android:label="FavoritesFragment"
-        tools:layout="@layout/fragment_favorites"/>
-    <fragment
         android:id="@+id/helpFragment"
         android:name="com.siasg.comprasnet.ui.fragment.more.HelpFragment"
         android:label="HelpFragment"
@@ -100,6 +92,12 @@
         <action
             android:id="@+id/action_resultFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
+        <argument
+            android:name="filterArg"
+            app:argType="integer" />
+        <argument
+            android:name="searchArg"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/altFragment"
@@ -107,11 +105,17 @@
         android:label="AltFragment"
         tools:layout="@layout/fragment_alt">
         <action
-            android:id="@+id/action_altFragment_to_resultFragment"
+            android:id="@+id/action_altFragment_to_resultLocalFragment"
             app:destination="@id/resultLocalFragment" />
         <action
-            android:id="@+id/action_altFragment_to_resultFragment2"
+            android:id="@+id/action_altFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
+        <argument
+            android:name="filterArg"
+            app:argType="integer" />
+        <argument
+            android:name="searchArg"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"

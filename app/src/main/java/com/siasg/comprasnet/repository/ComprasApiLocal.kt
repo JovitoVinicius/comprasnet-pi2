@@ -27,7 +27,7 @@ val origem_licitacao: ArrayList<String> = ArrayList()
 val uasg: ArrayList<String> = ArrayList()
 val valor_inicial: ArrayList<String> = ArrayList()
 
-fun providesComprasLocal(context: Context): RecyclerAdapter {
+fun providesComprasLocal(context: Context, filter: Int, search: String): RecyclerAdapter {
     try {
         val obj = JSONObject(loadJSONFromAsset(context))
         val userArray = obj.getJSONArray("contratos")
@@ -76,7 +76,9 @@ fun providesComprasLocal(context: Context): RecyclerAdapter {
         origem_licitacao,
         uasg,
         valor_inicial,
-        detalhes
+        detalhes,
+        filter,
+        search
     )
 
 }

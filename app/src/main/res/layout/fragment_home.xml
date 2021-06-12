@@ -42,6 +42,31 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <EditText
+                android:id="@+id/editTextSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:ems="10"
+                android:hint="@string/field_pesquisar"
+                android:inputType="text"
+                app:layout_constraintEnd_toStartOf="@+id/btSearch"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/viewHome" />
+
+            <Button
+                android:id="@+id/btSearch"
+                style="?primaryButtonStyle"
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="30dp"
+                android:onClick="@{fragment::pesquisar}"
+                app:icon="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextSearch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editTextSearch"
+                app:strokeColor="?backgroundColor" />
+
             <TextView
                 android:id="@+id/tvMinhaConta"
                 style="?titleStyle2"
@@ -53,35 +78,20 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/viewHome" />
 
-            <SearchView
-                android:id="@+id/searchView"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginEnd="50dp"
-                android:elevation="2dp"
-                android:iconifiedByDefault="false"
-                android:queryHint="@string/field_pesquisar"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/viewHome" >
-
-            </SearchView>
-
             <Button
                 android:id="@+id/btTodosContratos"
                 style="?homeButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginEnd="30dp"
                 android:backgroundTint="@color/green_total_contratos"
+                android:onClick="@{fragment::irParaResultTotal}"
                 android:text="@string/button_total_contratos"
-                android:onClick="@{fragment::irParaResult}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/searchView" />
+                app:layout_constraintTop_toBottomOf="@+id/editTextSearch" />
 
             <Button
                 android:id="@+id/bt30Contratos"
@@ -93,7 +103,7 @@
                 android:layout_marginEnd="30dp"
                 android:backgroundTint="@color/red_vencem_30dias"
                 android:text="@string/button_vencem_menos30"
-                android:onClick="@{fragment::irParaResult}"
+                android:onClick="@{fragment::irParaResult30}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -109,7 +119,7 @@
                 android:layout_marginEnd="30dp"
                 android:backgroundTint="@color/orange_vencem_30_60"
                 android:text="@string/button_vencem_30a60"
-                android:onClick="@{fragment::irParaResult}"
+                android:onClick="@{fragment::irParaResult60}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -125,7 +135,7 @@
                 android:layout_marginEnd="30dp"
                 android:backgroundTint="@color/yellow_vencem_60_90"
                 android:text="@string/button_vencem_60a90"
-                android:onClick="@{fragment::irParaResult}"
+                android:onClick="@{fragment::irParaResult90}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -141,7 +151,7 @@
                 android:layout_marginEnd="30dp"
                 android:backgroundTint="@color/blue_vencem_90_180"
                 android:text="@string/button_vencem_90a180"
-                android:onClick="@{fragment::irParaResult}"
+                android:onClick="@{fragment::irParaResult180}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -157,7 +167,7 @@
                 android:layout_marginEnd="30dp"
                 android:backgroundTint="@color/blue_vencem_180"
                 android:text="@string/button_vencem_mais180"
-                android:onClick="@{fragment::irParaResult}"
+                android:onClick="@{fragment::irParaResult180mais}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"

@@ -40,13 +40,6 @@ class MoreFragment : Fragment() {
         }
     }
 
-
-    fun irParaFavoritos(v: View){
-        if (checarLogin() == 0)
-            findNavController().navigate(R.id.action_moreFragment_to_favoritesFragment)
-    }
-
-
     fun irParaAjuda(v: View){
         findNavController().navigate(R.id.action_moreFragment_to_helpFragment)
     }

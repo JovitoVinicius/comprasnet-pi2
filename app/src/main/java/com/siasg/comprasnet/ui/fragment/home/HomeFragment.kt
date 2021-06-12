@@ -17,6 +17,8 @@ class HomeFragment : Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
     private val viewmodel: ComprasApiViewModel by viewModels()
+    var filter: Int = 0
+    var search: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,7 +34,44 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
     }
 
-    fun irParaResult(v: View){
-        findNavController().navigate(R.id.action_homeFragment_to_altFragment)
+    fun pesquisar(v: View){
+        search = binding.editTextSearch.text.toString().trim()
+        val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
+        findNavController().navigate(action)
+    }
+
+    fun irParaResultTotal(v: View){
+        val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
+        findNavController().navigate(action)
+    }
+
+    fun irParaResult30(v: View){
+        filter = R.color.red_vencem_30dias
+        val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
+        findNavController().navigate(action)
+    }
+
+    fun irParaResult60(v: View){
+        filter = R.color.orange_vencem_30_60
+        val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
+        findNavController().navigate(action)
+    }
+
+    fun irParaResult90(v: View){
+        filter = R.color.yellow_vencem_60_90
+        val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
+        findNavController().navigate(action)
+    }
+
+    fun irParaResult180(v: View){
+        filter = R.color.blue_vencem_90_180
+        val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
+        findNavController().navigate(action)
+    }
+
+    fun irParaResult180mais(v: View){
+        filter = R.color.blue_vencem_180
+        val action = HomeFragmentDirections.actionHomeFragmentToAltFragment(filter, search)
+        findNavController().navigate(action)
     }
 }
