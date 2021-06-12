@@ -1,17 +1,23 @@
 package com.siasg.comprasnet.ui.fragment.maps
 
 
+import android.Manifest
 import android.content.Context
+import android.content.pm.PackageManager
+import android.graphics.Color
+import android.location.LocationListener
+import android.location.LocationManager
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.getSystemService
+import androidx.core.app.ActivityCompat
+import androidx.fragment.app.Fragment
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.CircleOptions
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.siasg.comprasnet.R
@@ -19,8 +25,12 @@ import com.siasg.comprasnet.databinding.FragmentMapsBinding
 
 class MapsFragment : Fragment(), OnMapReadyCallback {
 
+    private val MAP_REQUEST_TICKET = 9999
     private lateinit var binding: FragmentMapsBinding
     private lateinit var map: GoogleMap
+    private lateinit var locationManager: LocationManager
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,6 +40,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
         binding.fragment = this
         binding.lifecycleOwner = this
 
+        locationManager = context?.getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
         // Recupera a instância do mapa configurado na atividade
         val mapFragment = childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
@@ -42,14 +53,28 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
         return binding.root
     }
 
+
+    override fun onStart() {
+        super.onStart()
+
+        checkPermission()
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        locationManager.removeUpdates(locationListener)
+    }
+
     override fun onMapReady(googleMap: GoogleMap) {
         map = googleMap
 
-        val posicaoMAPA  = LatLng(-15.798564288427615,-47.87107990369945)
-        val pinoMAPA= MarkerOptions().position(posicaoMAPA).title("Ministerio Agricultura, Pecuária e Abastecimento - MAPA")
+        val posicaoMAPA = LatLng(-15.798564288427615, -47.87107990369945)
+        val pinoMAPA = MarkerOptions().position(posicaoMAPA)
+            .title("Ministerio Agricultura, Pecuária e Abastecimento - MAPA")
         map.addMarker(pinoMAPA)
 
-        val posicaoMINC = LatLng(-15.795010500948887,-47.89366823458408)
+        val posicaoMINC = LatLng(-15.795010500948887, -47.89366823458408)
         val pinoMINC = MarkerOptions().position(posicaoMINC).title("Ministério da Cultura - MINC")
         map.addMarker(pinoMINC)
 
@@ -58,7 +83,8 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
         map.addMarker(pinoMC)
 
         val posicaoMCTI = LatLng(-15.799126477557907, -47.86985485787052)
-        val pinoMCTI = MarkerOptions().position(posicaoMCTI).title("Ministerio Ciência, Tecnologia e Inovações - MCTI")
+        val pinoMCTI = MarkerOptions().position(posicaoMCTI)
+            .title("Ministerio Ciência, Tecnologia e Inovações - MCTI")
         map.addMarker(pinoMCTI)
 
         val posicaoMCM = LatLng(-15.796911821870287, -47.86735030389867)
@@ -70,7 +96,8 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
         map.addMarker(pinoMD)
 
         val posicaoMDR = LatLng(-15.797839461421363, -47.878669469642034)
-        val pinoMDR = MarkerOptions().position(posicaoMDR).title("Ministerio Desenvolvimento Regional - MDR")
+        val pinoMDR =
+            MarkerOptions().position(posicaoMDR).title("Ministerio Desenvolvimento Regional - MDR")
         map.addMarker(pinoMDR)
 
         val posicaoME = LatLng(-15.800646055781922, -47.8691422706774)
@@ -90,7 +117,8 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
         map.addMarker(pinoMI)
 
         val posicaoMJSP = LatLng(-15.79575974644305, -47.86559804377653)
-        val pinoMJSP = MarkerOptions().position(posicaoMJSP).title("Ministerio Justiça e Segurança Pública - MJSP")
+        val pinoMJSP = MarkerOptions().position(posicaoMJSP)
+            .title("Ministerio Justiça e Segurança Pública - MJSP")
         map.addMarker(pinoMJSP)
 
         val posicaoMMA = LatLng(-15.798418688554124, -47.87243200204892)
@@ -102,11 +130,13 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
         map.addMarker(pinoMME)
 
         val posicaoMMFDH = LatLng(-15.79779378090323, -47.87305114898633)
-        val pinoMMFDH = MarkerOptions().position(posicaoMMFDH).title("Ministerio Mulher, Família e Direitos Humanos - MMFDH")
+        val pinoMMFDH = MarkerOptions().position(posicaoMMFDH)
+            .title("Ministerio Mulher, Família e Direitos Humanos - MMFDH")
         map.addMarker(pinoMMFDH)
 
         val posicaoMRE = LatLng(-15.800756279441597, -47.86753652905487)
-        val pinoMRE = MarkerOptions().position(posicaoMRE).title("Ministerio Relações Exteriores - MRE")
+        val pinoMRE =
+            MarkerOptions().position(posicaoMRE).title("Ministerio Relações Exteriores - MRE")
         map.addMarker(pinoMRE)
 
         val posicaoMS = LatLng(-15.800023291941814, -47.86826608995761)
@@ -122,9 +152,86 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
         map.addMarker(pinoMTUR)
 
         val posicaoGGU = LatLng(-15.800557443524507, -47.878320159720325)
-        val pinoGGU = MarkerOptions().position(posicaoGGU).title("Ministerio Controladoria-Geral da União - GGU")
+        val pinoGGU = MarkerOptions().position(posicaoGGU)
+            .title("Ministerio Controladoria-Geral da União - GGU")
         map.addMarker(pinoGGU)
+
+        val esplanada = LatLng(-15.79687874712141, -47.87007622870773)
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(esplanada, 13f))
+
+    }
+
+
+    private fun checkPermission(){
+        if (context?.let {
+                ActivityCompat.checkSelfPermission(
+                    it,
+                    Manifest.permission.ACCESS_FINE_LOCATION
+                )
+            } != PackageManager.PERMISSION_GRANTED
+        ){
+            activity?.let {
+                ActivityCompat.requestPermissions(
+                    it,
+                    arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                    MAP_REQUEST_TICKET
+                )
+            }
+        }else{
+            setupLocation()
+        }
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+
+        if (requestCode == MAP_REQUEST_TICKET) {
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                setupLocation()
+            }
+        }
+    }
+
+    private fun setupLocation() {
+        if (context?.let {
+                ActivityCompat.checkSelfPermission(
+                    it,
+                    Manifest.permission.ACCESS_FINE_LOCATION
+                )
+            } != PackageManager.PERMISSION_GRANTED
+        ) {
+            return
+        }
+        
+        locationManager.requestLocationUpdates(
+            LocationManager.GPS_PROVIDER,
+            3000,
+            1.0f,
+            locationListener
+        )
+    }
+
+    private val locationListener = LocationListener { localicacao ->
+        val ponto = LatLng(localicacao.latitude, localicacao.longitude)
+        val novoPino = MarkerOptions().position(ponto).title("Usuario: ${ponto.latitude}, ${ponto.longitude}")
+        map.addMarker(novoPino)
+
+
+        val circulo = CircleOptions()
+            .center(ponto)
+            .radius(200.0)
+            .strokeColor(Color.RED)
+            .fillColor(Color.parseColor("#88FF0000"))
+
+        map.addCircle(circulo)
 
     }
 
 }
+
+
+
