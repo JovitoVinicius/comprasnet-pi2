@@ -80,7 +80,7 @@ class SignUpFragment : Fragment() {
 
         val user = UserDatabase(userId.toString(), nome, email)
         ref.child(userId.toString()).setValue(user).addOnCompleteListener{
-            Toast.makeText(this.context, "Usuário Salvo com sucesso", Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "Usuário Salvo com sucesso", Toast.LENGTH_LONG).show()
         }
 
 
