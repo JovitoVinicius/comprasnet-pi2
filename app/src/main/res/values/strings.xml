@@ -5,7 +5,7 @@
     <string name="button_start">VAMOS LÁ</string>
     <string name="text_onboarding1">Navegue pelos contratos</string>
     <string name="text_onboarding2">Filtre os contratos desejados</string>
-    <string name="text_onboarding3">Favorite para ver depois</string>
+    <string name="text_onboarding3">Localize os órgãos responsáveis</string>
 
     /** Barra de Navegação **/
     <string name="button_home">Home</string>
