@@ -47,7 +47,6 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
         // Solicita a apresentação do mapa em background
         mapFragment.getMapAsync(this)
 
-
         // Inflate the layout for this fragment
         return binding.root
     }
@@ -152,7 +151,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
 
         val posicaoGGU = LatLng(-15.800557443524507, -47.878320159720325)
         val pinoGGU = MarkerOptions().position(posicaoGGU)
-            .title("Ministerio Controladoria-Geral da União - GGU")
+            .title("Controladoria-Geral da União - CGU")
         map.addMarker(pinoGGU)
 
         val posicaoCN = LatLng(-15.799490998064154, -47.86417119171833)

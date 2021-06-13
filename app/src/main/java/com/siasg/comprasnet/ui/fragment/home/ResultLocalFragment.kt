@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.siasg.comprasnet.R
 import com.siasg.comprasnet.databinding.FragmentResultLocalBinding
@@ -16,6 +17,9 @@ import providesComprasLocal
 class ResultLocalFragment : Fragment() {
 
     private lateinit var binding: FragmentResultLocalBinding
+    val args: ResultLocalFragmentArgs by navArgs()
+    var filter: Int = 0
+    var search: String = ""
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,8 +34,11 @@ class ResultLocalFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        filter = args.filterArg
+        search = args.searchArg
+
         binding.rvResultados.layoutManager = LinearLayoutManager(context)
-        binding.rvResultados.adapter = providesComprasLocal(requireContext())
+        binding.rvResultados.adapter = providesComprasLocal(requireContext(),filter, search)
     }
 
     fun irParaDetails(v: View){

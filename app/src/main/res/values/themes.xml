@@ -61,13 +61,13 @@
             Error color indica erro nos componentes como texto inválido em um campo de texto.
         -->
         <item name="colorError">@color/dark_red_1</item>
-        <item name="colorOnError">@color/dark_gray</item>
+        <item name="colorOnError">@color/white</item>
 
         <!--
             Background color é usada em componentes que rolagem como a ScrollView e Listas.
         -->
         <item name="backgroundColor">@color/white</item>
-        <item name="colorOnBackground">@color/dark_gray_2</item>
+        <item name="colorOnBackground">@color/black</item>
 
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?colorPrimaryVariant</item>

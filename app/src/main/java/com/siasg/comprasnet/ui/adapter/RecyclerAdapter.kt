@@ -37,7 +37,9 @@ class RecyclerAdapter(
     private var origem_licitacao: ArrayList<String> = ArrayList(),
     private var uasg: ArrayList<String> = ArrayList(),
     private var valor_inicial: ArrayList<String> = ArrayList(),
-    private var detalhes: String = ""
+    private var detalhes: String = "",
+    private var filter: Int,
+    private var search: String
 ) :
     RecyclerView.Adapter<RecyclerAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -50,11 +52,32 @@ class RecyclerAdapter(
         holder.titulo.text = "UASG: ${uasg[position]}"
         holder.subtitulo1.text = "Contrato ID: ${identificador[position]}"
         holder.subtitulo2.text = objeto[position]
-        holder.cardColor.setBackgroundResource(setDateColor(data_assinatura[position]))
 
-        holder.itemView.setOnClickListener{ view ->
-
+        if (search == ""){
+            holder.itemView.visibility = View.VISIBLE
+        } else {
+            if(holder.subtitulo2.text.contains(search))
+                holder.itemView.visibility = View.VISIBLE
+            else {
+                holder.itemView.visibility = View.GONE
+                holder.itemView.layoutParams = RecyclerView.LayoutParams(0, 0)
+            }
         }
+
+        val cardColor = setDateColor(data_termino_vigencia[position])
+        if (filter == 0){
+            holder.itemView.visibility = View.VISIBLE
+            holder.cardColor.setBackgroundResource(cardColor)
+        } else {
+            if (cardColor != filter){
+                holder.itemView.visibility = View.GONE
+                holder.itemView.layoutParams = RecyclerView.LayoutParams(0, 0)
+            } else {
+                holder.itemView.visibility = View.VISIBLE
+                holder.cardColor.setBackgroundResource(cardColor)
+            }
+        }
+
 
         holder.itemView.setOnClickListener { view ->
             detalhes = "ID: ${identificador[position]},\n" +
@@ -99,7 +122,8 @@ class RecyclerAdapter(
     fun setDateColor(string: String): Int {
         val date_contrato = LocalDate.parse(string, DateTimeFormatter.ISO_DATE).toEpochDay()
         val date_hoje = LocalDateTime.now().toLocalDate().toEpochDay()
-        val days_elapsed = date_hoje - date_contrato
+        val days = (date_hoje - date_contrato)
+        val days_elapsed = Math.abs(days)
 
         return when {
             days_elapsed < 30 -> R.color.red_vencem_30dias
