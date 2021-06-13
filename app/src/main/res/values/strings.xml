@@ -97,4 +97,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    /** Tela Chatbot **/
+    <string name="field_type_message">Digite sua mensagem...</string>
+
 </resources>
