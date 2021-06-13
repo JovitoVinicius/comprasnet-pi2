@@ -94,10 +94,11 @@
     <string name="link_favoritos">Favoritos</string>
     <string name="link_vistos">Vistos</string>
     <string name="link_ajuda">Ajuda</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     /** Tela Chatbot **/
-    <string name="field_type_message">Digite sua mensagem...</string>
+    <string name="field_type_message">Digite sua mensagem…</string>
+    <string name="field_bot">ComprasNet BOT</string>
+    <string name="field_enviada">Oi</string>
+    <string name="field_recebida">Olá! Em que posso ajudar?</string>
 
 </resources>

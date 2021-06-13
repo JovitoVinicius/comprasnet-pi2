@@ -29,7 +29,7 @@ class ContratosListAdapter(
 
     override fun onBindViewHolder(holder: ContratosViewHolder, position: Int) {
         val contrato = listaContratos[position]
-        //holder.color.setBackgroundColor(Color.parseColor(setDateColor(holder.binding.contrato!!.data_assinatura)))
+        holder.color.setBackgroundResource((setDateColor(holder.binding.contrato!!.data_termino_vigencia)))
         holder.binding.contrato = contrato
         holder.binding.executePendingBindings()
     }
@@ -40,4 +40,19 @@ class ContratosListAdapter(
 class ContratosViewHolder(v: View) : RecyclerView.ViewHolder(v) {
     val binding: ListResultadosBinding = ListResultadosBinding.bind(v)
     val color: ImageView = v.findViewById(R.id.colorCard)
+}
+
+fun setDateColor(string: String): Int {
+    val date_contrato = LocalDate.parse(string, DateTimeFormatter.ISO_DATE).toEpochDay()
+    val date_hoje = LocalDateTime.now().toLocalDate().toEpochDay()
+    val days = (date_hoje - date_contrato)
+    val days_elapsed = Math.abs(days)
+
+    return when {
+        days_elapsed < 30 -> R.color.red_vencem_30dias
+        days_elapsed in 30..59 -> R.color.orange_vencem_30_60
+        days_elapsed in 60..89 -> R.color.yellow_vencem_60_90
+        days_elapsed in 90..179 -> R.color.blue_vencem_90_180
+        else -> R.color.blue_vencem_180
+    }
 }
