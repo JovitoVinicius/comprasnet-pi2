@@ -4,7 +4,6 @@ package com.siasg.comprasnet.ui.fragment.maps
 import android.Manifest
 import android.content.Context
 import android.content.pm.PackageManager
-import android.graphics.Color
 import android.location.LocationListener
 import android.location.LocationManager
 import android.os.Bundle
@@ -225,15 +224,15 @@ class MapsFragment : Fragment(), OnMapReadyCallback {
 
     private val locationListener = LocationListener { localicacao ->
         val ponto = LatLng(localicacao.latitude, localicacao.longitude)
-        val novoPino = MarkerOptions().position(ponto).title("Usuario: ${ponto.latitude}, ${ponto.longitude}")
+        val novoPino = MarkerOptions().position(ponto).title("Sua localização")
         map.addMarker(novoPino)
 
 
         val circulo = CircleOptions()
             .center(ponto)
             .radius(200.0)
-            .strokeColor(Color.RED)
-            .fillColor(Color.parseColor("#88FF0000"))
+            .strokeColor(R.color.blue_vencem_90_180)
+            .fillColor(R.color.blue_vencem_90_180)
 
         map.addCircle(circulo)
 
