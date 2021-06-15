@@ -68,6 +68,7 @@ class MyAccountFragment : Fragment() {
     @SuppressWarnings
     fun deleteUser(v: View){
         delUser()
+        Firebase.auth.signOut()
         irParaLogin()
     }
 

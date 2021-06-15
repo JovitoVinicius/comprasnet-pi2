@@ -45,7 +45,7 @@ class HelpFragment : Fragment() {
     }
 
     private fun initRecyclerView() {
-        binding.rvChat.layoutManager = LinearLayoutManager(activity)
+        binding.rvChat.layoutManager = LinearLayoutManager(activity?.applicationContext)
         binding.rvChat.adapter = adapter
     }
 
