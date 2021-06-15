@@ -81,6 +81,7 @@
 
         <!-- Customize your theme here. -->
         <item name="primaryButtonStyle">@style/Widget.MaterialComponents.Button.OutlinedButton.PrimaryButton</item>
+        <item name="homeButtonStyle">@style/Widget.MaterialComponents.Button.OutlinedButton.HomeButton</item>
         <item name="textButtonStyle">@style/Widget.TextButton</item>
         <item name="iconButtonStyle">@style/Widget.App.Button.OutlinedButton.IconOnly</item>
         <item name="textAppearanceButton">@style/TextAppearance.MaterialComponents.Button.BaseButton</item>
